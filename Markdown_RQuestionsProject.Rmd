@@ -2,5 +2,16 @@
 title: "R_Markdown_RQuestions"
 author: "Brock Hayes"
 date: "March 6, 2019"
-output: html_document
+output: word document
 ---
+
+require('tm')
+
+##Reading data from csv
+rQuestions <- read.csv("rquestions/Questions.csv", header = TRUE, sep = ",")
+
+questionTags <- read.csv("rquestions/Tags.csv", header = TRUE, sep = ",")
+## Create a data frame
+
+df1 <- data.frame(rQuestions, questionTags)
+df1
